@@ -11,6 +11,8 @@ from datetime import datetime
 
 # Complete the time_delta function below.
 def time_delta(t1, t2):
+    
+    #date format is Day dd Mon yyyy hh:mm:ss +xxxx
     d_format = "%a %d %b %Y %H:%M:%S %z"
     date1 = datetime. strptime(t1, d_format)
     date2 = datetime. strptime(t2, d_format)
