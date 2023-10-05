@@ -1,13 +1,15 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-import math
 
-AB = int(input())
-BC = int(input())
+def ninjaAndRangeMax(n: int, x: int, y: int, a: List[int]) -> int:
+    # Define the start and end positions of the subarray.
+    startpos = x
+    endpos = y + 1
 
-AC = math.sqrt(AB**2 + BC**2)
-H = AC / 2.0
-ad = BC / 2
+    # Return the maximum element in the subarray of 'a' from index 'startpos' to 'endpos'.
+    return max(a[startpos:endpos])
 
-angle = int(round(math.degrees(math.acos(ad/H))))
-
-print(str(angle) + "\u00B0")
+if __name__ == '__main__':
+    t = int(input())
+    for _ in range(t):
+        n, x, y = list(map(int, input().split()))
+        a = list(map(int, input().split()))
+        print(ninjaAndRangeMax(n, x, y, a))
