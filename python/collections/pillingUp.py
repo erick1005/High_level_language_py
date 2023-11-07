@@ -1,3 +1,5 @@
+#CHECKING AND PILING BLOCKS
+
 res = []
 T = int(input())
 for _ in range(T):
